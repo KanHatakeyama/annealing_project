@@ -12,6 +12,7 @@ You can run jupyter notebook codes for the demo codes
 # Author
 - Kan Hatakeyama-Sato
 - Waseda University
+- https://kanhatakeyama.github.io/
 - http://www.appchem.waseda.ac.jp/~polymer/PolymerDatabase/
  
 Thank you!
