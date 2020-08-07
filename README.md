@@ -1,4 +1,4 @@
-# Dependency analysis by linear regression
+# Quantum-inspired annealing for material searching
 - Codes for our paper "****"
 - DOI: 
 
