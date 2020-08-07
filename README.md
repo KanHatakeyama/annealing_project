@@ -7,7 +7,7 @@ You can run jupyter notebook codes for the demo codes
  
 # Note
 - In the paper, Fujitsu digital annealer is used for annealing.
-- The annealer is not open for public. So, an CPU-based module, Blueqat is used in the demos instead.
+- The annealer is not open for public. Therefore, an CPU-based module, Blueqat is used in the demos instead.
 
 # Author
 - Kan Hatakeyama-Sato
