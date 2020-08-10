@@ -1,6 +1,6 @@
 # Quantum-inspired annealing for material searching
-- Codes for our paper "****"
-- DOI: 
+- Codes for our paper Tackling the challenge of a huge materials science search space with quantum-inspired annealing
+- http://arxiv.org/abs/2008.03023
 
 # Usage
 You can run jupyter notebook codes for the demo codes
