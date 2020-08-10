@@ -1,5 +1,5 @@
 # Quantum-inspired annealing for material searching
-- Codes for our paper Tackling the challenge of a huge materials science search space with quantum-inspired annealing
+- Codes for our paper "Tackling the challenge of a huge materials science search space with quantum-inspired annealing"
 - http://arxiv.org/abs/2008.03023
 
 # Usage
