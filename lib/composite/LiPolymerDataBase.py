@@ -4,7 +4,7 @@ import re
 import numpy as np
 
 # maximum number of smiles to be processed in one composite
-MAX_SMILES = 6
+MAX_SMILES = 3
 
 
 class LiPolymerDataBase:
@@ -65,17 +65,17 @@ class LiPolymerDataBase:
         single_record = calc_wt_ratio_from_mol_wt(
             single_record, wt_list, key="composition", punct="/")
 
-        single_record["wt_ratio"] = slash_to_list(single_record["wt_ratio"])
+        single_record["wt_ratio"] = slash_to_list(single_record["wt_ratio"])[:MAX_SMILES]
 
         # load smiles information and split smiles
         smiles_list = [self.compound_database.comp_dict[i]["SMILES"]
                        for i in comp_list]
         single_record["smiles_list"] = flatten_list(
-            [s.split(".") for s in smiles_list])
+            [s.split(".") for s in smiles_list])[:MAX_SMILES]
         
         # load smiles wt information
         SMILES_wt_list = [self.compound_database.comp_dict[i]
-                        ["wt_ratio"] for i in comp_list]
+                        ["wt_ratio"] for i in comp_list][:MAX_SMILES]
         
         # calculate weight ratio of each smiles in a composite
         wt_ratio= single_record["wt_ratio"]
@@ -107,16 +107,16 @@ class LiPolymerDataBase:
 
         # load structure information
         single_record["structureList"] = [
-            self.compound_database.comp_dict[i]["Structure"] for i in comp_list]
+            self.compound_database.comp_dict[i]["Structure"] for i in comp_list][:MAX_SMILES]
 
         # MWList
         single_record["MWList"] = [
-            self.compound_database.comp_dict[i]["Mw"] for i in comp_list]
+            self.compound_database.comp_dict[i]["Mw"] for i in comp_list][:MAX_SMILES]
 
         # load fingerprint
         try:
             single_record["fp_list"] = [self.compound_database.fp_dict[i]
-                                        for i in single_record["smiles_list"]]
+                                        for i in single_record["smiles_list"]][:MAX_SMILES]
         except:
             print("error", single_record["smiles_list"])
 
